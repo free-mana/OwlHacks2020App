@@ -45,7 +45,7 @@ public class CaseAdapter extends BaseAdapter {
         }else{
             textView = (TextView) convertView;
         }
-        String display = names[pos] + ": " + locations[pos].toString();
+        String display = names[pos];// + ": " + locations[pos].toString();
         textView.setText(display);
         textView.setGravity(Gravity.CENTER);
         if(infected[pos]){
