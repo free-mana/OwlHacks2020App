@@ -10,10 +10,9 @@
         android:id="@+id/heightInches"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
         android:layout_marginBottom="32dp"
         android:ems="10"
+        android:hint="Height (inches)"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/weightPounds"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,25 +22,23 @@
         android:id="@+id/weightPounds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
         android:layout_marginBottom="32dp"
         android:ems="10"
+        android:hint="Weight (pounds)"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/dateOfBirth"
+        app:layout_constraintBottom_toTopOf="@+id/ageInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/dateOfBirth"
+        android:id="@+id/ageInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
         android:layout_marginBottom="32dp"
         android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/isCompromised"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -49,12 +46,12 @@
         android:id="@+id/sexInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/heightInches"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@+id/heightInches">
 
         <RadioButton
             android:id="@+id/maleChoice"
@@ -67,25 +64,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="female" />
+
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/nameInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/sexInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/isCompromised"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="113dp"
@@ -103,10 +86,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="138dp"
         android:layout_marginEnd="139dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="192dp"
         android:text="Calculate Risk"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sexLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Biological Sex:"
+        app:layout_constraintBottom_toBottomOf="@+id/sexInput"
+        app:layout_constraintEnd_toStartOf="@+id/sexInput"
+        app:layout_constraintTop_toTopOf="@+id/sexInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

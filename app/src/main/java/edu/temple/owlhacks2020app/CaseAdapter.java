@@ -50,6 +50,8 @@ public class CaseAdapter extends BaseAdapter {
         textView.setGravity(Gravity.CENTER);
         if(infected[pos]){
             textView.setBackgroundColor(Color.RED);
+        }else{
+            textView.setBackgroundColor(Color.WHITE);
         }
         return textView;
     }
